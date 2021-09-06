@@ -23,7 +23,7 @@ export class RoomListComponent implements OnInit {
   }
 
   deleteRoom(id: number) {
-    this.roomService.deleteRoom(id);
+    this.roomService.deleteRoom(id)
       .subscribe(
         data => {
           console.log(data);

@@ -1,6 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { RoomDetailsComponent } from './room-details/room-details.component';
@@ -11,12 +14,16 @@ import { UpdateRoomComponent } from './update-room/update-room.component';
   declarations: [
     AppComponent,
     CreateRoomComponent,
+    UpdateRoomComponent,
     RoomDetailsComponent,
     RoomListComponent,
-    UpdateRoomComponent
+    RoomListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
